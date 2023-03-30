@@ -46,4 +46,11 @@ public class MainPage {
             ADD_PROMOTIONAL_ITEM.click();
         }
     }
+
+    public void addItemsToCart(String item) {
+        for(int i = 1; i <= Integer.valueOf(item); i++) {
+            page.isVisible("//div[@data-product='" + i + "']//button");
+            ADD_PROMOTIONAL_ITEM.click();
+        }
+    }
 }

@@ -3,6 +3,8 @@ package pages;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+
 public class CartPopUp {
     private Page page;
     private final Locator CART_POP_UP;
@@ -30,6 +32,9 @@ public class CartPopUp {
     }
 
     public void itemNameShouldBeVisible() {
-        ITEM_NAME.isVisible();
+//        ITEM_NAME.isVisible();
+        assertThat(ITEM_NAME).hasCount(1);
+        assertThat(TOTAL_AMOUNT).hasCount(1);
+        assertThat(ITEM_COST).hasCount(1);
     }
 }

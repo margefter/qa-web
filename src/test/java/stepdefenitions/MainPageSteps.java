@@ -33,4 +33,9 @@ public class MainPageSteps {
     public void addPromotionalItemToCart(String item) {
         mainPage.addPromotionalItemToCart(item);
     }
+
+    @When("add {string} items to cart")
+    public void addItemsToCart(String item) {
+        mainPage.addItemsToCart(item);
+    }
 }
