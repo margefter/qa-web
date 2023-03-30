@@ -39,4 +39,9 @@ public class MainPage {
         NON_PROMOTIONAL_ITEM.isVisible();
         ADD_NON_PROMOTIONAL_ITEM.click();
     }
+
+    public void addPromotionalItemToCart(String item) {
+        PROMOTIONAL_ITEM.isVisible();
+        ADD_PROMOTIONAL_ITEM.click();
+    }
 }

@@ -28,4 +28,9 @@ public class MainPageSteps {
     public void addNonPromotionalItemToCart(String item) {
         mainPage.addNonPromotionalItemToCart(item);
     }
+
+    @When("add {string} promotional item to cart")
+    public void addPromotionalItemToCart(String item) {
+        mainPage.addPromotionalItemToCart(item);
+    }
 }
