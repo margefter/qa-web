@@ -41,7 +41,9 @@ public class MainPage {
     }
 
     public void addPromotionalItemToCart(String item) {
-        PROMOTIONAL_ITEM.isVisible();
-        ADD_PROMOTIONAL_ITEM.click();
+        for(int i = 0; i < Integer.valueOf(item); i++) {
+            PROMOTIONAL_ITEM.isVisible();
+            ADD_PROMOTIONAL_ITEM.click();
+        }
     }
 }
