@@ -18,15 +18,15 @@ public class DriverFactory {
         switch (browserName) {
             case "firefox":
                 browserType = Playwright.create().firefox();
-                browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(headless).setSlowMo(3030));
+                browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(headless).setSlowMo(1030));
                 break;
             case "chrome":
                 browserType = Playwright.create().chromium();
-                browser = browserType.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(headless).setSlowMo(3030));
+                browser = browserType.launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(headless).setSlowMo(1030));
                 break;
             case "webkit":
                 browserType = Playwright.create().webkit();
-                browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(headless).setSlowMo(3030));
+                browser = browserType.launch(new BrowserType.LaunchOptions().setHeadless(headless).setSlowMo(1030));
                 break;
         }
         if (browserType == null) throw new IllegalArgumentException("Could not Launch Browser for type" + browserType);

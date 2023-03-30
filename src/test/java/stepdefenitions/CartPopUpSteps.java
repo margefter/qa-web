@@ -1,6 +1,7 @@
 package stepdefenitions;
 
 import factory.DriverFactory;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.CartPopUp;
@@ -16,5 +17,10 @@ public class CartPopUpSteps {
     @When("click Перейти в корзину")
     public void clickGoToCart() {
         cartPopUp.clickGoToCart();
+    }
+
+    @And("item name, cost, total amount should be visible")
+    public void itemNameShouldBeVisible() {
+        cartPopUp.itemNameShouldBeVisible();
     }
 }
